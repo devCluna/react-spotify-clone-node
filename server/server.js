@@ -95,7 +95,26 @@ app.post('/newReleases', (req, res)=>{
     .catch(err=>{
       console.log(err)
     })
-  })
+})
+
+//FEATURED PLAYLIST ENDPOINT
+app.post('/featuredPlaylist',(req, res)=>{
+    const accessToken = req.body.accessToken
+    const country = req.body.country
+  
+    const spotifyApi = new SpotifyWebApi({
+      accessToken: accessToken
+    })
+    
+    spotifyApi.getFeaturedPlaylists({ limit : 14, offset: 0, country: country, locale: 'sv_SE' })
+    .then(response => {
+      console.log("FEATURED_PLAYLIST", new Date)
+      res.json(response.body.playlists.items)
+    })
+    .catch(err =>{
+      console.log(err)
+    })
+})
 
 
 
