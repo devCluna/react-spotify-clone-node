@@ -22,7 +22,6 @@ app.post("/refresh", (req, res) => {
       redirectUri : process.env.REDIRECT_URI,
       refreshToken,
     })
-    //REfresh
 
     spotifyApi
       .refreshAccessToken()
