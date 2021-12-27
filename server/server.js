@@ -116,6 +116,24 @@ app.post('/featuredPlaylist',(req, res)=>{
     })
 })
 
+//CHECK_TOKEN ENDPOINT
+app.post('/checkToken' ,(req, res)=> {
+    const accessToken = req.body.accessToken
+    const spotifyApi = new SpotifyWebApi({
+        accessToken: accessToken
+    })
+  
+    spotifyApi.getMe()
+    .then(response=> {
+        console.log("CHECK_TOKEN", new Date)
+        res.json(response)
+    })
+    .catch(err => {
+        res.json(err)
+        console.log(err.statusCode)
+        console.log("ACCESS_TOKEN_EXPIRED", new Date)
+    })
+})
 
 
 app.listen(process.env.PORT, ()=>{
