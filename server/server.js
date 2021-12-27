@@ -148,6 +148,19 @@ app.post('/currentTrack', (req, res)=>{
     })
 })
 
+//CURRENT_USER_LIKED_SONGS ENDPOINT
+app.post('/likedTracks', (req, res)=>{
+    const accessToken = req.body.accessToken
+    const spotifyApi = new SpotifyWebApi({
+      accessToken: accessToken
+    })
+    spotifyApi.getMySavedTracks()
+    .then(response => {
+      console.log("LIKED TRACKS")
+      res.json(response.body.items)
+    })
+  })
+
 app.listen(process.env.PORT, ()=>{
     console.clear()
     console.log("Server runnning on port:", process.env.PORT)
