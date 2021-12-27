@@ -78,6 +78,24 @@ app.post('/me' ,(req, res)=> {
     })
 })
 
+//NEW_RELEASES ENDPOINT
+app.post('/newReleases', (req, res)=>{
+    const accessToken = req.body.accessToken
+    const country = req.body.country
+  
+    const spotifyApi = new SpotifyWebApi({
+      accessToken: accessToken
+    })
+  
+    spotifyApi.getNewReleases({ limit : 14, offset: 0, country: country})
+    .then(response => {
+      console.log('NEW RELEASES', new Date)
+      res.json(response.body.albums.items)
+    })
+    .catch(err=>{
+      console.log(err)
+    })
+  })
 
 
 
