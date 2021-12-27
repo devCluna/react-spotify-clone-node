@@ -135,6 +135,18 @@ app.post('/checkToken' ,(req, res)=> {
     })
 })
 
+//CURRENT_TRACK ENDPOINT
+app.post('/currentTrack', (req, res)=>{
+    const accessToken = req.body.accessToken
+    const spotifyApi = new SpotifyWebApi({
+      accessToken: accessToken
+    })
+  
+    spotifyApi.getMyCurrentPlayingTrack()
+    .then(response=>{
+      res.json(response.data)
+    })
+})
 
 app.listen(process.env.PORT, ()=>{
     console.clear()
