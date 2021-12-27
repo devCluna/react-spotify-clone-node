@@ -179,6 +179,25 @@ app.post('/myPlaylists', (req, res)=>{
     })
 })
 
+//PLAYLIST_TRACKS ENDPOINT
+app.post('/playlistTracks', (req, res)=>{
+    const accessToken = req.body.accessToken
+    const playlistId = req.body.playlistId
+  
+    const spotifyApi = new SpotifyWebApi({
+      accessToken: accessToken
+    })
+  
+    spotifyApi.getPlaylistTracks(playlistId)
+    .then(data => {
+      res.json(data.body)
+    })
+    .catch(err =>{
+      console.log(err)
+    })
+  
+  })
+
 app.listen(process.env.PORT, ()=>{
     console.clear()
     console.log("Server runnning on port:", process.env.PORT)
