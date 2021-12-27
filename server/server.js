@@ -159,7 +159,25 @@ app.post('/likedTracks', (req, res)=>{
       console.log("LIKED TRACKS")
       res.json(response.body.items)
     })
-  })
+})
+
+//CURRENT_USER_PLAYLISTS ENDPOINT
+app.post('/myPlaylists', (req, res)=>{
+    const accessToken = req.body.accessToken
+    const userId = req.body.userId
+  
+    const spotifyApi = new SpotifyWebApi({
+      accessToken: accessToken
+    })
+  
+    spotifyApi.getUserPlaylists(userId)
+    .then(data => {
+      res.json(data.body.items)
+    })
+    .catch(err =>{
+      console.log(err)
+    })
+})
 
 app.listen(process.env.PORT, ()=>{
     console.clear()
