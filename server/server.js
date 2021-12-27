@@ -60,6 +60,24 @@ app.post('/login', (req, res)=> {
     })
 })
 
+//MY_INFO ENDPOINT
+app.post('/me' ,(req, res)=> {
+    const accessToken = req.body.accessToken
+    const spotifyApi = new SpotifyWebApi({
+        accessToken: accessToken
+    })
+    
+    spotifyApi.getMe()
+    .then(response=> {
+        console.log("CURRENT USER DATA SENT", new Date)
+        res.json(response.body)
+    })
+    .catch(err => {
+        res.json(err)
+        console.log(err.statusCode, new Date)
+    })
+})
+
 
 
 
