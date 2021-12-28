@@ -16,6 +16,8 @@ const Dashboard = ({code, setCode}) => {
     const [userInfo, setUserInfo] = useState()
     const [playlists, setPlaylists] = useState([])
     const [currentPlaylist, setCurrentPlaylist] = useState([])
+    const [userTopTracks, setUserTopTracks] = useState([])
+    const [userTopArtists, setUserTopArtists] = useState([])
 
     useEffect(()=>{
         console.log("Dashboards")
@@ -68,7 +70,7 @@ const Dashboard = ({code, setCode}) => {
     return (
         <DashboardContainer>
            <Sidebar accessToken={accessToken} section={section} setSection={setSection} playlists={playlists} setPlaylists={setPlaylists} setCurrentPlaylist={setCurrentPlaylist} currentPlaylist={currentPlaylist} setUri={setUri}/> 
-            <Section accessToken={accessToken} section={section} setSection={setSection} setUri={setUri} setPlay={setPlay} playlists={playlists} currentPlaylist={currentPlaylist} setCurrentPlaylist={setCurrentPlaylist} userInfo={userInfo} setCode={setCode}/>
+            <Section accessToken={accessToken} section={section} setSection={setSection} setUri={setUri} setPlay={setPlay} playlists={playlists} currentPlaylist={currentPlaylist} setCurrentPlaylist={setCurrentPlaylist} userInfo={userInfo} setCode={setCode} userTopTracks={userTopTracks} setUserTopTracks={setUserTopTracks} userTopArtists={userTopArtists} setUserTopArtists={setUserTopArtists}/>
             <Player accessToken={accessToken} uri={uri}/>
         </DashboardContainer>
     )

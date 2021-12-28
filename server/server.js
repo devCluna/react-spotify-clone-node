@@ -196,7 +196,37 @@ app.post('/playlistTracks', (req, res)=>{
       console.log(err)
     })
   
+})
+
+app.post('/userTopTracks', (req, res)=>{
+  const accessToken = req.body.accessToken
+  
+    const spotifyApi = new SpotifyWebApi({
+      accessToken: accessToken
+    })
+  spotifyApi.getMyTopTracks()
+  .then(response=>{
+    res.json(response.body)
   })
+  .catch(err=>{
+    console.log(err)
+  })
+})
+
+app.post('/userTopArtists', (req, res)=>{
+  const accessToken = req.body.accessToken
+  
+    const spotifyApi = new SpotifyWebApi({
+      accessToken: accessToken
+    })
+  spotifyApi.getMyTopArtists()
+  .then(response=>{
+    res.json(response.body)
+  })
+  .catch(err=>{
+    console.log(err)
+  })
+})
 
 app.listen(process.env.PORT, ()=>{
     console.clear()
