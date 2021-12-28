@@ -20,9 +20,7 @@ const Dashboard = ({code, setCode}) => {
     const [userTopArtists, setUserTopArtists] = useState([])
 
     useEffect(()=>{
-        console.log("Dashboards")
         if(localStorage.getItem('accessToken') === 'undefined' || localStorage.getItem('accessToken') === null){
-            console.log("Dashboards")
             axios.post('/login', {code})
             .then(response => {
                 const {accessToken, refreshToken, expiresIn} = response.data
