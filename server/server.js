@@ -228,6 +228,25 @@ app.post('/userTopArtists', (req, res)=>{
   })
 })
 
+app.post('/searchTrack', (req, res)=>{
+  const accessToken = req.body.accessToken
+  const search = req.body.search
+  
+    const spotifyApi = new SpotifyWebApi({
+      accessToken: accessToken
+    })
+
+  spotifyApi.searchTracks(search)
+  .then(response=>{
+    res.json(response.body)
+  })
+  .catch(err=>{
+    console.log(err)
+  })
+})
+
+
+
 app.listen(process.env.PORT, ()=>{
     console.clear()
     console.log("Server runnning on port:", process.env.PORT)
