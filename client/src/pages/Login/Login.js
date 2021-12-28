@@ -1,6 +1,10 @@
+import { useEffect } from "react"
 import { AUTH_URL } from "../../lib/spotify"
 
 const Login = () => {
+    useEffect(()=>{
+       document.title = "Spotify Client Login" 
+    },[])
 
     return (
         <div>

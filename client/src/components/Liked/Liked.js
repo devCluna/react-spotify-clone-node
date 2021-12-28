@@ -7,6 +7,8 @@ const Liked = ({accessToken, setUri}) => {
     const [likedTracks, setLikedTracks] = useState([])
 
     useEffect(() => {
+            document.title = "Liked Tracks | Spotify Client" 
+    
         if(accessToken !== "undefined" && accessToken !== null ){
             axios.post("/likedTracks",{
             accessToken: accessToken

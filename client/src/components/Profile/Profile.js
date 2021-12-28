@@ -13,6 +13,8 @@ const Profile = ({userInfo, accessToken, userTopTracks, setUserTopTracks, userTo
     }
 
     useEffect(()=>{
+            document.title = "Profile - Spotify Client" 
+    
         if(accessToken !== "undefined" && accessToken !== null ){
             axios.post('/userTopTracks', {accessToken})
             .then(response=>{

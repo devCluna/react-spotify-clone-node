@@ -3,7 +3,10 @@ import { InfoContainer } from "../Home/HomeElements"
 import { Header, ImgHeader, PlayListsContainer, PlayListName, PlayListQuantity, Body, BodyTable, BodyP, BodyTitle, BodySongName, BodyArtist, BodyDateP, BodyTimeP, BodyAlbumP, BodyImg, PlayItem, HeadTable, HeadTitle, HeadDate, HeadTime } from "./PlayListsElements"
 
 const PlayLists = ({accessToken, playlists, currentPlaylist, setSection, setCurrentPlaylist, setUri}) => {
-    
+    useEffect(()=>{
+        document.title = "Playlists | Spotify Client" 
+    },[])
+
     return (
         <PlayListsContainer>
             <Header>

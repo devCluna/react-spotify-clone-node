@@ -8,7 +8,8 @@ const Home = ({accessToken, uri, setUri, setPlay}) => {
     const [featuredPlaylists, setFeaturedPlaylists] = useState([])
 
     useEffect(()=>{
-        
+        document.title = "Home | Spotify Client" 
+    
         if(accessToken !== "undefined" && accessToken !== null ){
             axios.post('/me', {accessToken})
             .then(response=>{
