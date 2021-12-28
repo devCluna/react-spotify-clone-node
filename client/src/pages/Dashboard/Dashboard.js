@@ -1,8 +1,8 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import Player from "../../Components/Player/Player"
-import Section from "../../Components/Section/Section"
-import Sidebar from "../../Components/Sidebar/Sidebar"
+import Player from "../../components/Player/Player"
+import Section from "../../components/Section/Section"
+import Sidebar from "../../components/Sidebar/Sidebar"
 import { DashboardContainer } from "./DashboardElements"
 
 const Dashboard = ({code, setCode}) => {
