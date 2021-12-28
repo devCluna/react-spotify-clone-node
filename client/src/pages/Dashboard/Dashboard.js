@@ -42,6 +42,10 @@ const Dashboard = ({code, setCode}) => {
         if(localStorage.getItem('accessToken') !== null && localStorage.getItem('accessToken') !== 'undefined'){
             axios.post('/checkToken', {accessToken})
             .then(response=>{
+                //SET USER INFO
+                if(response.data.statusCode === 200){
+                    setUserInfo(response.data.body)
+                }
                 console.log("CHECK_TOKEN")
                 //Refresh Token
                 if(response.data.statusCode === 401) {
@@ -64,7 +68,7 @@ const Dashboard = ({code, setCode}) => {
     return (
         <DashboardContainer>
            <Sidebar accessToken={accessToken} section={section} setSection={setSection} playlists={playlists} setPlaylists={setPlaylists} setCurrentPlaylist={setCurrentPlaylist} currentPlaylist={currentPlaylist} setUri={setUri}/> 
-            <Section accessToken={accessToken} section={section} setSection={setSection} setUri={setUri} setPlay={setPlay} playlists={playlists} currentPlaylist={currentPlaylist} setCurrentPlaylist={setCurrentPlaylist}/>
+            <Section accessToken={accessToken} section={section} setSection={setSection} setUri={setUri} setPlay={setPlay} playlists={playlists} currentPlaylist={currentPlaylist} setCurrentPlaylist={setCurrentPlaylist} userInfo={userInfo} setCode={setCode}/>
             <Player accessToken={accessToken} uri={uri}/>
         </DashboardContainer>
     )

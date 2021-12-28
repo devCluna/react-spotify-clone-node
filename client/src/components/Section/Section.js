@@ -2,9 +2,10 @@ import Home from "../Home/Home"
 import Liked from '../Liked/Liked'
 import PlayList from "../Playlist/Playlist"
 import PlayLists from "../Playlists/PlayLists"
+import User from "../User/User"
 import { SectionContainer } from "./SectionElements"
 
-const Section = ({section, setSection, accessToken, uri, setUri, setPlay, playlists, currentPlaylist, setCurrentPlaylist}) => {
+const Section = ({section, setSection, accessToken, uri, setUri, setPlay, playlists, currentPlaylist, setCurrentPlaylist, userInfo, setCode}) => {
 
     return(
         <SectionContainer>
@@ -13,6 +14,7 @@ const Section = ({section, setSection, accessToken, uri, setUri, setPlay, playli
             {section ==="LIKED" && <Liked accessToken={accessToken} setUri={setUri}/>}
             {section ==="PLAYLISTS" && <PlayLists setSection={setSection} accessToken={accessToken} currentPlaylist={currentPlaylist} setCurrentPlaylist={setCurrentPlaylist} playlists={playlists} setUri={setUri}/>}
             {section ==="PLAYLIST" && <PlayList setSection={setSection} section={section} accessToken={accessToken} currentPlaylist={currentPlaylist} playlists={playlists} setUri={setUri}/>}
+            <User userInfo={userInfo} setCode={setCode}/>
         </SectionContainer>
     )
 }

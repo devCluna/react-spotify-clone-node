@@ -7,6 +7,7 @@ export const SectionContainer = styled.div`
     background-color:#000;
     padding: 0.5em;
     order: 2;
+    position: relative;
     
 
 /* Extra small devices (phones, 600px and down) */
@@ -27,6 +28,6 @@ export const SectionContainer = styled.div`
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    /
+    
 } 
 `

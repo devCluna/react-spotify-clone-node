@@ -8,9 +8,6 @@ const codeSearch = new URLSearchParams(window.location.search).get('code')
 axios.defaults.baseURL= process.env.REACT_APP_SERVER_URL
 
 function App() {
-  useEffect(()=>{
-     
-  }, [])
   const [code, setCode] = useState()
   
 useEffect(()=>{
