@@ -77,7 +77,7 @@ export const Title = styled.p`
 `
 export const InfoItem = styled.div`
     position: relative;
-    padding: 0.7em 0.8em 0.25em 0.8em;
+    padding: 0.7em 1.95em 0.25em 0.8em;
     width: 100%;
     background: #1D1D1D;
     display: flex;
