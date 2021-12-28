@@ -13,7 +13,6 @@ const Liked = ({accessToken, setUri}) => {
         })
         .then(response=> {
           setLikedTracks(response.data)
-          console.log(response.data)
         })
         .catch(err => {
           console.log(err)
