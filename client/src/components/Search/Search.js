@@ -6,10 +6,6 @@ const Search = ({accessToken, setUri}) => {
     const [search, setSearch] = useState("")
     const [arraySearch, setArraySearch] = useState([])
 
-    useEffect(()=>{
-        
-        
-    },[])
 
     const convertSeconds = (milliseconds) => {
         let minutes = Math.floor(milliseconds/60000)

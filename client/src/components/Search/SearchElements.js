@@ -4,6 +4,10 @@ import styled from 'styled-components'
 export const SearchContainer = styled.div`
     height: 80vh;
     overflow-y: scroll;
+
+    @media only screen and (max-width: 600px) {
+        height: 72vh;
+    }
 `
 export const Form = styled.form`
     margin-top: 1.8em;
