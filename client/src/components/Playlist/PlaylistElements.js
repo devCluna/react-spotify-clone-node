@@ -7,6 +7,7 @@ export const PlaylistContainer = styled.div`
     background: #000;
    
 `
+
 export const InfoContainer = styled.div`
     display: flex;
     
