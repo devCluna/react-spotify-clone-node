@@ -1,5 +1,9 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
+import Player from "../../Components/Player/Player"
+import Section from "../../Components/Section/Section"
+import Sidebar from "../../Components/Sidebar/Sidebar"
+import { DashboardContainer } from "./DashboardElements"
 
 const Dashboard = ({code, setCode}) => {
     const [accessToken, setAccessToken] = useState(localStorage.getItem('accessToken'))
@@ -58,7 +62,11 @@ const Dashboard = ({code, setCode}) => {
 
     
     return (
-       <></>
+        <DashboardContainer>
+           <Sidebar accessToken={accessToken} section={section} setSection={setSection} playlists={playlists} setPlaylists={setPlaylists} setCurrentPlaylist={setCurrentPlaylist} currentPlaylist={currentPlaylist} setUri={setUri}/> 
+            <Section accessToken={accessToken} section={section} setSection={setSection} setUri={setUri} setPlay={setPlay} playlists={playlists} currentPlaylist={currentPlaylist} setCurrentPlaylist={setCurrentPlaylist}/>
+            <Player accessToken={accessToken} uri={uri}/>
+        </DashboardContainer>
     )
 }
 
