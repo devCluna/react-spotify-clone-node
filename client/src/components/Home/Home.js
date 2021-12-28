@@ -29,7 +29,51 @@ const Home = ({accessToken, uri, setUri, setPlay}) => {
     },[accessToken])
  
     return (
-        <></>
+        <HomeContainer>
+            <HomeItem>
+            <TitleH2>New Releases</TitleH2>
+            <InfoContainer>
+                {newReleases.map(release => (
+                    <InfoItem key={release.id} 
+                            onClick={()=>{
+                            setUri(release.uri)
+                            setPlay(true)    
+                        }}>
+                        <ImgItem src={release.images[0].url}/>
+                            <PlayItem />
+                                <NameItem>{release.name}</NameItem>
+                                {release.artists.map(artist =>(
+                                    <div key={artist.id}>
+                                        <p>{artist.name}</p>
+                                    </div>
+                                ))}
+                    </InfoItem>            
+                ))}
+            </InfoContainer>
+            </HomeItem>
+
+            <HomeItem>
+                <TitleH2>Featured Playlists</TitleH2>
+                <InfoContainer>
+                {featuredPlaylists.map(playlist => (
+                    <InfoItem key={playlist.id}
+                        onClick={()=>{
+                        setUri(playlist.uri)
+                        setPlay(true)    
+                    }}
+                    >
+                        <ImgItem src={playlist.images[0].url}/>
+                        <PlayItem/>
+                            <NameItem>{playlist.name}</NameItem>
+                            {/* {release.artists.map(artist =>(
+                                <span key={artist.key}>{artist.name}</span>
+                            ))} */}
+                    </InfoItem>   
+                ))}
+                </InfoContainer> 
+            </HomeItem>
+
+        </HomeContainer>
     )
 }
 
