@@ -3,8 +3,13 @@ import styled from "styled-components";
 export const UserContainer = styled.div`
     position: absolute;
     top: 1.5em;
-    right: 005em;
+    right: 2.5em;
     color: #ffff;
+
+    @media only screen and (max-width: 600px) {
+        top: 1.2em;
+        right: 1.2em;
+    }
 `
 export const UserInfoContainer = styled.div`
     display: flex;
@@ -19,6 +24,7 @@ export const UserInfoContainer = styled.div`
         background-color: #282828;
         border: 1.5px solid #1ED760;
     }
+
 `
 
 export const ImgUser = styled.img`

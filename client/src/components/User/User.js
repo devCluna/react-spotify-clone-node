@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { ImgUser, UserContainer, UserInfoContainer, UserName, UserOption, UserOptionsContainer } from "./UserElements"
 
-const User = ({userInfo, setCode}) => {
+const User = ({userInfo, setCode, setSection}) => {
     const [toggleUserMenu, setToggleUserMenu] = useState(false)
     return (
         <UserContainer>
@@ -13,7 +13,10 @@ const User = ({userInfo, setCode}) => {
             </UserInfoContainer>
             {toggleUserMenu && 
                 <UserOptionsContainer>
-                    <UserOption>Profile</UserOption>
+                    <UserOption onClick={()=>{
+                        setSection('PROFILE')
+                        setToggleUserMenu(!toggleUserMenu)
+                    }}>Profile</UserOption>
                     <UserOption onClick={()=>{
                         setCode(false)
                         window.history.pushState({}, null, "/")
