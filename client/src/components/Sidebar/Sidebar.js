@@ -98,7 +98,6 @@ const Sidebar = ({section, setSection, accessToken, playlists, setPlaylists, set
                             setCurrentPlaylist(playlist)
                             setSection('PLAYLISTS')
                             setUri(playlist.uri)
-                            console.log(console.log(playlist))
                         }}>
                             {playlist.name}
                         </PlaylistItem>

@@ -23,7 +23,6 @@ const PlayList = ({currentPlaylist, section, accessToken, setUri}) => {
       if(playlistId !== null) {
           axios.post('/playlistTracks', {accessToken, playlistId})
           .then(response => {
-              console.log(response.data.items)
               setPlaylists(response.data.items)
           })
       }
