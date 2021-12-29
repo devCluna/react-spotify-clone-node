@@ -1,6 +1,11 @@
+@import url(//db.onlinewebfonts.com/c/112ec584bfc481ccde03444e67f8fc3f?family=Circular+Spotify+Tx+T+Bold);
+
+@font-face {font-family: "Circular Spotify Tx T Bold"; src: url("//db.onlinewebfonts.com/t/112ec584bfc481ccde03444e67f8fc3f.eot"); src: url("//db.onlinewebfonts.com/t/112ec584bfc481ccde03444e67f8fc3f.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/112ec584bfc481ccde03444e67f8fc3f.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/112ec584bfc481ccde03444e67f8fc3f.woff") format("woff"), url("//db.onlinewebfonts.com/t/112ec584bfc481ccde03444e67f8fc3f.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/112ec584bfc481ccde03444e67f8fc3f.svg#Circular Spotify Tx T Bold") format("svg"); } 
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family:Circular Spotify Tx T Bold, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;

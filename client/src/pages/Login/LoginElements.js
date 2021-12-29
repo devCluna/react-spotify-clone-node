@@ -48,12 +48,14 @@ export const LoginButton = styled.a`
     margin-left: 1em;
     border-radius: 150px;
     padding: 0.6em 1.2em;
-    background-color: #1FE566;
+    background-color: rgba(31,229,102,0.7);
     text-decoration: none;
     color: white;
     font-weight: bold;
+    transition: all 0.5s ease-in;
     &:hover{
         text-decoration: underline;
+        background-color: #1FE566;
     }
 `
 export const Img = styled.img`
