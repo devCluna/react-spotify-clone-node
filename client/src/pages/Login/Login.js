@@ -12,6 +12,9 @@ const Login = () => {
 
 
     useEffect(()=>{
+        setTimeout(()=>{
+            setToggleDisclaimer(false)
+        },5000)
        document.title = "Spotify Client Login" 
     },[])
 
