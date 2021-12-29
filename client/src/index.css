@@ -1,13 +1,13 @@
 @font-face {
   font-family: Product sans;
   src: url('../src//fonts/Circular\ Font\ Family/ProductSans-Regular.ttf');
-  font-stretch : normal
+  font-weight : normal
 }
 
 @font-face {
   font-family: Product sans bold;
   src: url('../src//fonts/Circular\ Font\ Family/ProductSans-Regular.ttf');
-  font-stretch : bold
+  font-weight : bold
 }
 
 

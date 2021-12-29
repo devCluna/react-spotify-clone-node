@@ -122,6 +122,7 @@ export const SidebarPlayListOptionItem = styled.div`
 
 export const SidebarOption = styled.div`
     margin-left: 0.12em;
+    font-weight: bold;
 `
 
 export const HomeIconUnselected = styled(RiHome5Line)`
