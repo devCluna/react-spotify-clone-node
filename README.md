@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/TribilinYT/dolla-react-responsive-frontpage-devcluna">
+  <a href="https://developer.spotify.com/documentation/web-api">
     <img src="/client/src/assets/logos/01_RGB/Spotify_Logo_RGB_Black.png" alt="Logo" width="250" height="80">
   </a>
 
