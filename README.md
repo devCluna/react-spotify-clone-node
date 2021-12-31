@@ -60,8 +60,9 @@
 
 # About
 ### Description and motivation
-
-
+A Spotify web player client clone that is supported and powered by the Spotify Ltd. public API.
+By honing my skills in a more complex project, I had to replicate the main functionalities, interactions, and/or user interfaces of the original application, with support for the browsers Mozilla, Safari, and Google Chrome, as well as their mobile versions.
+As a result of this, I had to reconsider some long-held beliefs about the management of asynchronicity, navigation, and responsiveness. 
 
 # Getting Started
 ### Prerequisites
@@ -177,8 +178,8 @@ Contributions, [issues](https://github.com/devCluna/react-spotify-clone-node/iss
 5.	Open a Pull Request
 
 # Special Thanks
-I want to thank [@bchiang7](https://github.com/bchiang7) for inspiring me to create this version of Spotify, thanks to her [Spotify-profile](https://spotify-profile.herokuapp.com) repository. I was able to take some creative ideas to be included in this repo, and finally acknowledge the work of [@gilbarbara](https://github.com/gilbarbara) with his repo called [react-spotify-web -playback](https://github.com/gilbarbara/react-spotify-web-playback)
-Well, with this I was able to add some functionalities such as the player, which saved me a lot of development time. God bless you.
+Thanks to [@bchiang7](https://github.com/bchiang7)'s [Spotify-profile](https://spotify-profile.herokuapp.com) repository, I was inspired to make this version of Spotify.
+I was able to include some unique concepts into my repo, and I'd want to recognize [@gilbarbara](https://github.com/gilbarbara)'s work with his r[react-spotify-web -playback](https://github.com/gilbarbara/react-spotify-web-playback) repo. That makes add several features quite easier, such as the Spotify web player, which saved me a lot of time in the development process. God's blessings to you.
 
 # Author
 
