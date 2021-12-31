@@ -5,7 +5,7 @@
   <a href="https://developer.spotify.com/documentation/web-api">
     <img src="/client/src/assets/logos/01_RGB/Spotify_Logo_RGB_Black.png" alt="Logo" width="250" height="80">
   </a>
-
+  
   <h3 align="center">Spotify React Client (non official site)</h3>
 
   <p align="center">
@@ -27,7 +27,7 @@
 
 <!-- TABLE OF CONTENTS -->
 <details open="open" >
-    <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+    <summary><h2 style="color:blue;font-size:46px;">Table of Contents</h2></summary>
   <ol>
     <li>
       <a href="#about">About</a>
