@@ -179,7 +179,7 @@ Contributions, [issues](https://github.com/devCluna/react-spotify-clone-node/iss
 
 # Special Thanks
 Thanks to [@bchiang7](https://github.com/bchiang7)'s [Spotify-profile](https://spotify-profile.herokuapp.com) repository, I was inspired to make this version of Spotify.
-I was able to include some unique concepts into my repo, and I'd want to recognize [@gilbarbara](https://github.com/gilbarbara)'s work with his r[react-spotify-web -playback](https://github.com/gilbarbara/react-spotify-web-playback) repo. That makes add several features quite easier, such as the Spotify web player, which saved me a lot of time in the development process. God's blessings to you.
+I was able to include some unique concepts into my repo, and I'd want to recognize [@gilbarbara](https://github.com/gilbarbara)'s work with his [react-spotify-web -playback](https://github.com/gilbarbara/react-spotify-web-playback) repo. That makes add several features quite easier, such as the Spotify web player, which saved me a lot of time in the development process. God's blessings to you.
 
 # Author
 
